@@ -1,0 +1,273 @@
+🎯 Title:
+Build a Full-Stack, Real-Time Collaborative Platform "CollabVerse" with Stunning Landing Page, Modern UI/UX, Connected Frontend-Backend, Creator-Joiner Flow, and Real-Time Collaboration Features
+
+🛠 Introduction:
+You are tasked with building CollabVerse, a full-fledged, full-stack, scalable real-time collaborative innovation platform.
+
+The platform will allow users to:
+
+Collaborate on startup ideas and projects.
+
+Form teams between "Creators" (idea owners) and "Joiners" (contributors).
+
+Manage tasks, events, communication, and progress in real time.
+
+Requirements:
+
+Full frontend-backend connection via secure APIs.
+
+Fully modern, beautiful, intuitive, and responsive UI/UX.
+
+Should be fully functional both on Replit and local environments after download.
+
+🏗 Full Functional Specifications:
+🔥 1. Public Landing Page (Before Login)
+The Landing Page should be beautiful, fast, and engaging.
+
+Sections:
+Hero Section:
+
+Catchy tagline (e.g., "Turn Ideas into Reality. Build Projects, Build Futures.")
+
+CTA Button: "Get Started" → Redirects to Authentication.
+
+About Platform:
+
+Briefly explain what CollabVerse is.
+
+Highlight features: Team building, Real-time collaboration, Skill-based matching.
+
+Key Features:
+
+Clean grid showcasing key features:
+
+Create Projects
+
+Find Projects
+
+Team Chat
+
+Kanban Task Board
+
+Smart Scheduling
+
+Proof of Work Badges
+
+Pricing Plans:
+
+Free Tier vs Pro Tier comparison table:
+
+Free: Create 5 projects, join unlimited projects, basic AI.
+
+Pro ₹199/month: Create up to 10 projects, advanced AI matchmaking, calendar sync, priority support.
+
+Customer Reviews:
+
+Display real or mock reviews from users: Students, freelancers, founders.
+
+Successful Projects Showcase:
+
+Highlight 2–3 successful (or sample) projects completed via CollabVerse.
+
+Final CTA: Get Started Now:
+
+Button redirects to Sign Up/Login.
+
+🔐 2. Authentication & User Onboarding:
+Google OAuth and GitHub OAuth login/signup (via Clerk or equivalent).
+
+Role selection during onboarding:
+
+Creator
+
+Joiner
+
+Both
+
+Collect:
+
+Skills
+
+Interests
+
+Experience Level
+
+Weekly Availability
+
+Store securely in user profile.
+
+👤 3. Role-Based Behavior:
+Creator:
+Can create/manage projects.
+
+Accept/reject Joiner applications.
+
+Assign team roles and tasks.
+
+Organize meetings via shared calendar.
+
+Joiner:
+Discover and search projects.
+
+Apply to projects by sending application message.
+
+Join project teams after acceptance.
+
+Contribute to tasks, events, discussions.
+
+📂 4. Project Management System:
+Each project should include:
+
+Overview Tab (Project Info + Timeline)
+
+Team Management Tab (Members list, roles)
+
+Task Management Kanban Board:
+
+To-Do, In Progress, Done columns
+
+Assign tasks, update status, set priority
+
+Calendar Tab:
+
+Create/view meetings and deadlines
+
+Detect timezones automatically
+
+📡 5. Real-Time Collaboration Features:
+Live Team Chat:
+
+Chat system per project, real-time updates (WebSocket preferred).
+
+Live Task Board Updates:
+
+When a task is moved or updated, reflect instantly for all team members.
+
+Notifications:
+
+Application updates
+
+New task assignments
+
+Calendar event reminders
+
+New chat messages
+
+🛠 Backend Functionalities:
+Authentication Management
+
+Role & Profile Management
+
+Projects CRUD APIs
+
+Applications Management (Apply/Accept/Reject)
+
+Team Management APIs
+
+Tasks CRUD APIs
+
+Messages (Chat) APIs
+
+Calendar Events APIs
+
+Notifications System
+
+Protect routes based on authentication and user role (RBAC).
+
+Encrypt sensitive user data.
+
+Use REST APIs with best practices.
+
+🧱 Backend Entities (Database Models):
+
+Entity	Fields
+User	id, name, email, role, skills, experience, availability, profile picture
+Project	id, creatorId, title, description, skillsNeeded, timeline, coverImage
+Application	id, userId, projectId, status (pending/accepted/rejected)
+Team	id, projectId, userId, role (owner/admin/member)
+Task	id, projectId, assignedTo, title, description, status (todo/inProgress/done), priority
+Message	id, projectId, senderId, content, timestamp
+CalendarEvent	id, projectId, title, datetime, description
+🎨 Frontend Pages Required:
+
+Page	Description
+Landing Page	Hero, About, Features, Pricing, Reviews, Success Stories, CTA
+Sign Up/Login	Google/GitHub OAuth
+Onboarding	Choose role, fill skills & profile
+Creator Dashboard	Manage projects, team, tasks, calendar
+Joiner Dashboard	Browse/apply to projects, view status
+Project Discovery	Filter/search projects
+Project Detail Page	Overview, Team, Kanban Board, Calendar
+Task Management	Real-time drag-drop Kanban board
+Team Chat	Real-time messaging system
+Calendar View	Unified project calendar
+Profile Page	View/edit personal details
+Settings Page	Manage account, roles
+🎨 UI/UX Guidelines:
+Modern design, inspired by Notion, Linear, Trello, Vercel.
+
+Light/Dark Mode toggle.
+
+Clean, bold typography (Inter, DM Sans).
+
+Minimalistic, card-based layouts.
+
+Beautiful micro-animations (button clicks, page transitions, task moves).
+
+🛡 Security Best Practices:
+Role-Based Access Control (RBAC) for API and UI.
+
+Use secure sessions and encrypted tokens.
+
+Input validation on frontend and backend.
+
+Database security: encrypt sensitive data.
+
+Maintain audit logs for critical user actions.
+
+💸 Monetization & Pricing Structure (Future Ready):
+Free Tier:
+
+Create up to 5 projects.
+
+Basic AI features.
+
+Join unlimited projects.
+
+Pro Tier ₹199/month:
+
+Create up to 10 projects.
+
+Advanced AI-powered matchmaking.
+
+Smart calendar sync with Google/Outlook.
+
+Premium support.
+
+Integrate Stripe or Razorpay for subscription payments.
+
+🚀 Deliverables:
+Fully connected frontend-backend full-stack platform.
+
+Real-time updates for chat, tasks, notifications.
+
+Stunning, responsive landing page before login.
+
+Authentication, onboarding, profile management flows.
+
+Project creation, discovery, and application workflows.
+
+Secure, scalable APIs and database.
+
+Deployable on Replit and runnable on local machine.
+
+⚡ Final Developer Tips:
+Stack choice flexible — prioritize clean modular code and behavior over specific libraries.
+
+Frontend must communicate properly with backend via secure APIs.
+
+Mobile optimization is mandatory (fully responsive design).
+
+Aim for smooth, delightful user experience.
+
+Ensure minimal loading times, real-time synchronization, and engaging UI.

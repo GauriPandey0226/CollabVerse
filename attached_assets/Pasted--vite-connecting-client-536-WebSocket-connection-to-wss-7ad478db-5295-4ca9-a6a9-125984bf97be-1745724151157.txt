@@ -1,0 +1,150 @@
+[vite] connecting...
+client:536  WebSocket connection to 'wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/?token=NtMZ9Led71x3' failed: 
+setupWebSocket @ client:536
+client:536  Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=NtMZ9Led71x3' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)
+queryClient.ts:66 Making query request to /api/user
+queryClient.ts:77 Query response from /api/user: 200 OK
+queryClient.ts:86 Query data from /api/user: Object
+queryClient.ts:66 Making query request to /api/profile
+queryClient.ts:77 Query response from /api/profile: 200 OK
+queryClient.ts:86 Query data from /api/profile: Object
+queryClient.ts:66 Making query request to /api/projects/1
+queryClient.ts:66 Making query request to /api/projects/1/team
+queryClient.ts:77 Query response from /api/projects/1/team: 200 OK
+queryClient.ts:77 Query response from /api/projects/1: 200 OK
+queryClient.ts:86 Query data from /api/projects/1: Object
+queryClient.ts:66 Making query request to /api/user/1
+queryClient.ts:66 Making query request to /api/projects/1/applications
+queryClient.ts:77 Query response from /api/projects/1/applications: 200 OK
+queryClient.ts:86 Query data from /api/projects/1/applications: Array(0)
+queryClient.ts:77 Query response from /api/user/1: 200 OK
+queryClient.ts:86 Query data from /api/user/1: Object
+queryClient.ts:66 Making query request to /api/projects/1/team
+queryClient.ts:77 Query response from /api/projects/1/team: 200 OK
+queryClient.ts:66 Making query request to /api/projects/1/messages
+2use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+queryClient.ts:77 Query response from /api/projects/1/messages: 200 OK
+queryClient.ts:86 Query data from /api/projects/1/messages: Array(1)
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+queryClient.ts:66 Making query request to /api/projects/1/team
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+hook.js:608  WebSocket error: Event
+overrideMethod @ hook.js:608
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+queryClient.ts:77 Query response from /api/projects/1/team: 200 OK
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:147  WebSocket error: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+overrideMethod @ hook.js:608
+ws2.onerror @ use-websocket.tsx:147
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:147  WebSocket error: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+overrideMethod @ hook.js:608
+ws2.onerror @ use-websocket.tsx:147
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+queryClient.ts:66 Making query request to /api/projects/1/team
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+queryClient.ts:77 Query response from /api/projects/1/team: 200 OK
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:147  WebSocket error: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+overrideMethod @ hook.js:608
+ws2.onerror @ use-websocket.tsx:147
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:147  WebSocket error: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+overrideMethod @ hook.js:608
+ws2.onerror @ use-websocket.tsx:147
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:147  WebSocket error: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+overrideMethod @ hook.js:608
+ws2.onerror @ use-websocket.tsx:147
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:129 WebSocket connection closed: 1005 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:147  WebSocket error: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+overrideMethod @ hook.js:608
+ws2.onerror @ use-websocket.tsx:147
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws
+use-websocket.tsx:147  WebSocket error: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+overrideMethod @ hook.js:608
+ws2.onerror @ use-websocket.tsx:147
+use-websocket.tsx:129 WebSocket connection closed: 1006 
+use-websocket.tsx:104 WebSocket connection established
+use-websocket.tsx:99 Connecting to WebSocket at wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/ws

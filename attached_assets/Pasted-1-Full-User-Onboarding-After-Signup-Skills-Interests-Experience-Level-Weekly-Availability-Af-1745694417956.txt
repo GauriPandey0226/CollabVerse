@@ -1,0 +1,67 @@
+1. Full User Onboarding After Signup (Skills, Interests, Experience Level, Weekly Availability)
+➔ After login/signup, the user should fill extra profile details (skills, interests, etc.)
+Status: Pending if not collected after signup.
+
+2. Role-Based Behavior
+Selecting role: Creator, Joiner, or Both during onboarding.
+
+UI/Features visible based on role. Status: Likely Pending
+
+3. Joiner - Project Discovery & Application
+Browse all projects
+
+Apply to join a project (send application message)
+
+Application approval/rejection by Creator Status: Pending
+
+4. Creator - Accept/Reject Applications
+➔ Creators must be able to view applications and accept/reject users into the team. Status: Pending
+
+5. Team Management
+Add accepted joiners into project teams
+
+Show team member list (role: owner/admin/member) Status: Partial (depending if team tab exists)
+
+6. Calendar View and Event Management
+Shared project calendar
+
+Add deadlines/meetings
+
+Auto timezone detection Status: Pending
+
+7. Advanced Real-Time Collaboration
+Real-time Kanban board updates for tasks (not just chat)
+
+Real-time Notifications for task assignments, chat messages, applications. Status: Partially done (only chat done)
+
+8. Profile Page
+View/edit personal details (skills, experience, etc.) Status: Pending
+
+9. Settings Page
+Manage account (change role, delete account, etc.) Status: Pending
+
+10. Pricing Plans & Stripe/Razorpay Integration (optional for MVP)
+Paid vs Free user plans
+
+Payment gateway integration Status: Optional at this stage (can skip for MVP)
+
+🔔 Other Minor Functionalities:
+
+Dark/Light mode toggle — if not added yet
+
+Proper error handling and toasts for all forms (task create, project create, application send, etc.)
+
+Mobile Responsiveness polish — check on smaller devices
+
+🌟 In Short, the Main Things Left:
+
+Area	Description
+User onboarding flow	Skills, experience, role selection
+Role-based features	Creator vs Joiner
+Project discovery + apply	Apply for projects
+Application management	Accept/Reject join requests
+Team management UI	List of team members
+Calendar events	Meeting scheduling
+Profile + settings pages	View/edit details
+Real-time Kanban updates	Task move live for all
+Notifications	Real-time events alerts

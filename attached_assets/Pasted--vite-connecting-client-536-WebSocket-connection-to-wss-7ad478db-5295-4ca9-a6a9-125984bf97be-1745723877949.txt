@@ -1,0 +1,26 @@
+[vite] connecting...
+client:536  WebSocket connection to 'wss://7ad478db-5295-4ca9-a6a9-125984bf97be-00-3s854vrgjz97q.worf.replit.dev/?token=fHGe5YLn5AF1' failed: 
+setupWebSocket @ client:536
+client:536  Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=fHGe5YLn5AF1' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)
+queryClient.ts:66 Making query request to /api/user
+queryClient.ts:77 Query response from /api/user: 200 OK
+queryClient.ts:86 Query data from /api/user: {id: 1, username: 'sadhvi_', password: '13c32c8502706e59132e59f5ead5ca733e952516988c0c01b9…58317a9e048ed4e1.6da2591ce21c44b552192992cbce8676', name: 'Sadhvi Kesarwani', email: 'Sadhvikes@gmail.com', …}
+queryClient.ts:66 Making query request to /api/profile
+queryClient.ts:77 Query response from /api/profile: 200 OK
+queryClient.ts:86 Query data from /api/profile: {user: {…}, projects: Array(2), joinedProjects: Array(0), applications: Array(0), notifications: Array(2), …}
+queryClient.ts:66 Making query request to /api/projects/1
+queryClient.ts:66 Making query request to /api/projects/1/team
+queryClient.ts:77 Query response from /api/projects/1/team: 200 OK
+queryClient.ts:77 Query response from /api/projects/1: 200 OK
+queryClient.ts:86 Query data from /api/projects/1: {id: 1, creatorId: 1, title: 'HackDiwas 2.0', description: 'Embark on a thrilling two-day Software and hardwar…te innovative solutions to real-world challenges.', skillsNeeded: Array(2), …}
+queryClient.ts:66 Making query request to /api/user/1
+queryClient.ts:66 Making query request to /api/projects/1/applications
+queryClient.ts:77 Query response from /api/user/1: 200 OK
+queryClient.ts:86 Query data from /api/user/1: {id: 1, username: 'sadhvi_', name: 'Sadhvi Kesarwani', email: 'Sadhvikes@gmail.com', role: 'both', …}
+queryClient.ts:77 Query response from /api/projects/1/applications: 200 OK
+queryClient.ts:86 Query data from /api/projects/1/applications: []
+queryClient.ts:66 Making query request to /api/projects/1/team
+queryClient.ts:77 Query response from /api/projects/1/team: 200 OK
