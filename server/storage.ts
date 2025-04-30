@@ -422,7 +422,8 @@ export class MemStorage implements IStorage {
       ...insertNotification, 
       id, 
       isRead: false,
-      createdAt 
+      createdAt,
+      relatedId: insertNotification.relatedId ?? null
     };
     this.notifications.set(id, notification);
     return notification;
@@ -457,10 +458,10 @@ export class DatabaseStorage implements IStorage {
     return user;
   }
   
-  async getUserByUsername(username: string): Promise<User | null> {
+  async getUserByUsername(username: string): Promise<User | undefined> {
     try {
         const [user] = await db.select().from(users).where(eq(users.username, username));
-        return user || null;
+        return user || undefined;
     } catch (error) {
         console.error('Error in getUserByUsername:', error);
         throw error;
@@ -552,13 +553,28 @@ export class DatabaseStorage implements IStorage {
     // Filter by text search if query is provided
     if (query) {
       const searchTerm = `%${query.toLowerCase()}%`;
-      projectQuery = projectQuery
+        const queryResult = await db
+        .select({
+          id: projects.id,
+          title: projects.title,
+          description: projects.description,
+          skillsNeeded: projects.skillsNeeded,
+          createdAt: projects.createdAt,
+          creatorId: projects.creatorId,
+          timeline: projects.timeline ?? null,
+          coverImage: projects.coverImage ?? null,
+          stage: projects.stage ?? null,
+          focus: projects.focus ?? null,
+          website: projects.website ?? null,
+        })
+        .from(projects)
         .where(
           or(
             like(projects.title, searchTerm),
             like(projects.description, searchTerm)
           )
         );
+      return queryResult;
     }
     
     // Execute the query
@@ -635,43 +651,41 @@ export class DatabaseStorage implements IStorage {
   }
   
   async createApplication(insertApplication: InsertApplication): Promise<Application> {
+    const baseApplicationData = {
+      userId: insertApplication.userId,
+      projectId: insertApplication.projectId,
+      message: insertApplication.message,
+      resumeLink: insertApplication.resumeLink,
+      linkedinProfile: insertApplication.linkedinProfile,
+      githubLink: insertApplication.githubLink,
+      status: "pending" as const,
+      skills: insertApplication.skills, // Include skills field
+      weeklyAvailability: insertApplication.weeklyAvailability, // Include weeklyAvailability field
+    
+    };
+
     try {
-      // Only include fields that exist in the database
-      const baseApplicationData = {
-        userId: insertApplication.userId,
-        projectId: insertApplication.projectId,
-        message: insertApplication.message,
-        resumeLink: insertApplication.resumeLink,
-        linkedinProfile: insertApplication.linkedinProfile,
-        githubLink: insertApplication.githubLink,
-        status: "pending" as const
-      };
-      
-      // Try to add optional fields if they're in the schema
-      try {
-        const [application] = await db
-          .insert(applications)
-          .values({
-            ...baseApplicationData,
-            // Cast to any to avoid TypeScript errors
-            ...(insertApplication as any).preferredRole ? { preferredRole: (insertApplication as any).preferredRole } : {},
-            ...(insertApplication as any).previousExperience ? { previousExperience: (insertApplication as any).previousExperience } : {},
-            ...(insertApplication as any).nitProof ? { nitProof: (insertApplication as any).nitProof } : {}
-          })
-          .returning();
-        return application;
-      } catch (innerErr) {
-        // If failed with additional fields, try with base fields only
-        console.warn('Falling back to base application fields only');
-        const [application] = await db
-          .insert(applications)
-          .values(baseApplicationData)
-          .returning();
-        return application;
-      }
+      const [application] = await db
+        .insert(applications)
+        .values({
+          ...baseApplicationData,
+          ...(insertApplication as any).preferredRole ? { preferredRole: insertApplication.preferredRole } : {},
+          ...(insertApplication as any).previousExperience ? { previousExperience: insertApplication.previousExperience } : {},
+          ...(insertApplication as any).nitProof ? { nitProof: insertApplication.nitProof } : {},
+        })
+        .returning();
+
+      return application;
     } catch (err) {
-      console.error('Error creating application:', err);
-      throw err;
+      console.error("Error inserting full application, retrying with base fields:", err);
+
+      // Retry with only base fields if the full insert fails
+      const [fallbackApplication] = await db
+        .insert(applications)
+        .values(baseApplicationData)
+        .returning();
+
+      return fallbackApplication;
     }
   }
   

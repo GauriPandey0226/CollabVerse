@@ -345,54 +345,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post('/api/applications', isAuthenticated, async (req, res) => {
     try {
       const userId = req.user!.id;
+
       const applicationData = insertApplicationSchema.parse({
         ...req.body,
-        userId
+        userId,
       });
-      
-      // Check if user already applied to this project
-      const existingApplication = await storage.getApplicationByUserAndProject(userId, applicationData.projectId);
-      if (existingApplication) {
-        return res.status(400).json({ message: 'You have already applied to this project' });
-      }
-      
+
       const application = await storage.createApplication(applicationData);
-      
-      // Create notification for project owner
-      const project = await storage.getProject(applicationData.projectId);
-      if (project) {
-        const notification = await storage.createNotification({
-          userId: project.creatorId,
-          type: 'application',
-          message: `New application for project "${project.title}"`,
-          relatedId: application.id
-        });
-        
-        // Send real-time notification to project creator via WebSocket
-        const creatorClients = userClients.get(project.creatorId) || [];
-        const notificationData = JSON.stringify({
-          type: 'new-notification',
-          data: {
-            id: notification.id,
-            message: notification.message,
-            type: notification.type,
-            relatedId: notification.relatedId,
-            isRead: notification.isRead
-          }
-        });
-        
-        for (const client of creatorClients) {
-          if (client.readyState === WebSocket.OPEN) {
-            client.send(notificationData);
-          }
-        }
-      }
-      
       res.status(201).json(application);
     } catch (err) {
       if (err instanceof ZodError) {
         res.status(400).json({ message: 'Invalid application data', errors: err.errors });
       } else {
+        console.error('Error creating application:', err);
         res.status(500).json({ message: 'Failed to create application' });
       }
     }
